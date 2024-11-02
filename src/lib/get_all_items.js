@@ -15,7 +15,7 @@ function getRequestAll(url, items, csrfToken){
         if(headerLink){
           const match = r.headers.get('link').match(/<[^;]+\/(\w+\.json[^;]+)>;\srel="next"/);
           if(match){
-            getRequestAll(match[1])
+            getRequestAll(match[1], items, csrfToken)
           } else {
             resolve(items)
           }

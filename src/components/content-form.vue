@@ -171,7 +171,7 @@ export default {
     startGettingItems(){
       if(this.pageType[1] !== 'blogs' && this.pageType[1] !== 'articles') {
         this.getItems({
-          url: `${this.pageType[1]}.json?view=250`,
+          url: `${this.pageType[1]}.json?limit=250`,
           csrfToken: this.csrfToken, 
           pageType: this.pageType[1],
           conditionArrayElements: this.conditionArrayElements,
